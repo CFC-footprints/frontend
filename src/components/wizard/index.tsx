@@ -1,14 +1,14 @@
-import React from "react"
-import StepWizard from "react-step-wizard"
-import ProgressBar from "react-bootstrap/ProgressBar"
-import DropdownButton from "react-bootstrap/DropdownButton"
-import Dropdown from "react-bootstrap/Dropdown"
-import Container from "react-bootstrap/Container"
-import Row from "react-bootstrap/Row"
-import Col from "react-bootstrap/Col"
-import Button from "react-bootstrap/Button"
+import React from "react";
+import StepWizard from "react-step-wizard";
+import ProgressBar from "react-bootstrap/ProgressBar";
+import DropdownButton from "react-bootstrap/DropdownButton";
+import Dropdown from "react-bootstrap/Dropdown";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Button from "react-bootstrap/Button";
 
-import "./styles.css"
+import "./styles.css";
 
 function Wizard() {
   const First = () => {
@@ -41,14 +41,14 @@ function Wizard() {
           </Row>
         </Col>
       </Container>
-    )
-  }
+    );
+  };
   return (
     <StepWizard>
       <First />
       <div />
     </StepWizard>
-  )
+  );
 }
 
-export default Wizard
+export default Wizard;

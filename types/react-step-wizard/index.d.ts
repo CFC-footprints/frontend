@@ -1,1 +1,1 @@
-declare module 'react-step-wizard'
+declare module "react-step-wizard";
