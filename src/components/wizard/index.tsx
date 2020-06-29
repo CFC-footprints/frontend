@@ -15,7 +15,7 @@ function Wizard() {
     const { previousStep, nextStep } = props;
 
     return (
-      <Container fluid>
+      <div className="wizard-step-2">
         <Col>
           <Row>
             <h3>Seleccionar ubicación del Cultivo</h3>
@@ -44,7 +44,7 @@ function Wizard() {
             </div>
           </Row> */}
         </Col>
-      </Container>
+      </div>
     );
   };
   const Third = (props: any) => {
@@ -98,11 +98,7 @@ function Wizard() {
         >
           Huella Hídrica
         </Button>
-        <Button
-          onClick={() => handleClick("carbono")}
-          className="wizard-buttons"
-          variant="secondary"
-        >
+        <Button className="wizard-buttons" variant="secondary">
           Huella de Carbono
         </Button>
       </div>
@@ -114,10 +110,8 @@ function Wizard() {
       <div className="wizard-steppers-container">
         <StepWizard>
           <First />
-
           <Second />
           <Third />
-          <div />
         </StepWizard>
       </div>
     </div>

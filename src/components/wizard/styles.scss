@@ -8,8 +8,11 @@
 }
 
 .wizard-container {
-  margin: 0 auto;
-  width: 1080px;
+  // margin: 0 auto;
+  // width: 1080px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .wizard-steppers-container {
@@ -28,6 +31,15 @@
       width: 100px;
       border-radius: 50%;
     }
+  }
+  
+  .wizard-step-2 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  
+   
   }
 
 }
