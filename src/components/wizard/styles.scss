@@ -1,0 +1,33 @@
+.wizard-progress-bar {
+  width: 100%;
+  margin: 10px 0 10px 0;
+}
+
+.wizard-dropdwon {
+  margin: 10px 0px;
+}
+
+.wizard-container {
+  margin: 0 auto;
+  width: 1080px;
+}
+
+.wizard-steppers-container {
+  width: 540px;
+  margin: 30px auto;
+  
+  .wizard-step-1 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  
+    .wizard-buttons {
+      margin: 10px 0;
+      height: 100px;
+      width: 100px;
+      border-radius: 50%;
+    }
+  }
+
+}

@@ -1,15 +1,21 @@
 import React from "react";
-import logo from "./logo.svg";
+// import logo from "./logo.svg";
 import "./App.css";
+import { Provider } from "react-redux";
 import Wizard from "./components/wizard";
+import Header from "./components/header";
+import store from "./store";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
+    <Provider store={store}>
+      <div className="App">
+        {/* <header className="App-header"> */}
+        <Header />
         <Wizard />
-      </header>
-    </div>
+        {/* </header> */}
+      </div>
+    </Provider>
   );
 }
 

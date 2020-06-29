@@ -1,5 +1,12 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
+  min-height: 100vh;
+  background-color: #f8f8f8;
+}
+
+div.container-fluid {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .App-logo {
@@ -14,7 +21,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #007de4;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
