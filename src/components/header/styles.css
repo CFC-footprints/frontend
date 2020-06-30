@@ -1,6 +1,9 @@
 .header-container {
   border-bottom: 1px solid #b4b4b4;
   background-color: #ffffff;
+  height: 70px;
+  display: flex;
+  align-items: center;
 }
 
 .header {
