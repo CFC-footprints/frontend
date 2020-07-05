@@ -1,13 +1,14 @@
 import React from "react";
 import StepWizard from "react-step-wizard";
-import ProgressBar from "react-bootstrap/ProgressBar";
-import DropdownButton from "react-bootstrap/DropdownButton";
-import Dropdown from "react-bootstrap/Dropdown";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
+// import ProgressBar from "react-bootstrap/ProgressBar";
+// import DropdownButton from "react-bootstrap/DropdownButton";
+// import Dropdown from "react-bootstrap/Dropdown";
+// import Container from "react-bootstrap/Container";
+// import Row from "react-bootstrap/Row";
+// import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
-
+import { useSelector, useDispatch } from "react-redux";
+import updateFootprint from "store/actions";
 import "./styles.scss";
 
 declare global {
@@ -18,7 +19,15 @@ declare global {
   }
 }
 
+interface wizardState {
+  footprintType: string;
+}
+
 function Wizard() {
+  const wizard = useSelector((state: wizardState) => state.footprintType);
+
+  const dispatch = useDispatch();
+
   const ActionButtons = (props: {
     nextStep: () => {};
     previousStep: () => {};
@@ -36,7 +45,6 @@ function Wizard() {
 
   const Second = (props: any) => {
     const { nextStep, previousStep } = props;
-
     return (
       <div className="wizard-step">
         <h3>Seleccionar ubicación del Cultivo</h3>
@@ -67,7 +75,8 @@ function Wizard() {
 
   const First = (props: any) => {
     const { nextStep } = props;
-    function handleClick(value: String) {
+    function handleClick(value: string) {
+      dispatch(updateFootprint({ footprintType: value }));
       nextStep();
     }
     return (

@@ -1,4 +1,4 @@
 import { createStore } from "redux";
-import rootReducer from "./components/reducers";
+import wizardReducer from "./store/reducers";
 
-export default createStore(rootReducer);
+export default createStore(wizardReducer);
