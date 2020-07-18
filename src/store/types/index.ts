@@ -1,7 +1,9 @@
 export const UPDATE_FOOTPRINT = "UPDATE_FOOTPRINT";
 
 export interface WizardState {
-  footprintType: string;
+  footprintType?: string;
+  initDateTime?: Date;
+  endDateTime?: Date;
 }
 
 interface UpdateFootprintAction {

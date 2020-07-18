@@ -1,9 +1,12 @@
 import { combineReducers } from "redux";
+import { useSelector, TypedUseSelectorHook } from "react-redux";
 
 import { WizardState, UPDATE_FOOTPRINT, WizardActionTypes } from "../types";
 
 const initialState: WizardState = {
   footprintType: "",
+  initDateTime: undefined,
+  endDateTime: new Date(),
 };
 
 export default function wizardReducer(
@@ -26,4 +29,4 @@ export const rootReducer = combineReducers({
   wizardState: wizardReducer,
 });
 
-export type RootState = ReturnType<typeof rootReducer>;
+export const useTypedSelector: TypedUseSelectorHook<WizardState> = useSelector;

@@ -1,14 +1,10 @@
 import React from "react";
 import StepWizard from "react-step-wizard";
-// import ProgressBar from "react-bootstrap/ProgressBar";
-// import DropdownButton from "react-bootstrap/DropdownButton";
-// import Dropdown from "react-bootstrap/Dropdown";
-// import Container from "react-bootstrap/Container";
-// import Row from "react-bootstrap/Row";
-// import Col from "react-bootstrap/Col";
-import Button from "react-bootstrap/Button";
-import { useSelector, useDispatch } from "react-redux";
-import updateFootprint from "store/actions";
+
+import Step1 from "./step1";
+import Step2 from "./step2";
+import Step3 from "./step3";
+
 import "./styles.scss";
 
 declare global {
@@ -19,89 +15,14 @@ declare global {
   }
 }
 
-interface wizardState {
-  footprintType: string;
-}
-
 function Wizard() {
-  const wizard = useSelector((state: wizardState) => state.footprintType);
-
-  const dispatch = useDispatch();
-
-  const ActionButtons = (props: {
-    nextStep: () => {};
-    previousStep: () => {};
-  }) => {
-    const { nextStep, previousStep } = props;
-    return (
-      <div className="wizard-steps-buttons">
-        <Button onClick={previousStep} variant="danger">
-          Atrás
-        </Button>
-        <Button onClick={nextStep}>Siguiente</Button>
-      </div>
-    );
-  };
-
-  const Second = (props: any) => {
-    const { nextStep, previousStep } = props;
-    return (
-      <div className="wizard-step">
-        <h3>Seleccionar ubicación del Cultivo</h3>
-        <ActionButtons nextStep={nextStep} previousStep={previousStep} />
-        {/* <Row>
-            <div className="wizard-progress-bar">
-              <ProgressBar now={10} label={`${10}%`} />
-            </div>
-          </Row> */}
-      </div>
-    );
-  };
-  const Third = (props: any) => {
-    const { previousStep, nextStep } = props;
-
-    return (
-      <div className="wizard-step">
-        <h3>Seleccionar Tipo de suelo</h3>
-        <ActionButtons nextStep={nextStep} previousStep={previousStep} />
-        {/* <Row>
-          <div className="wizard-progress-bar">
-            <ProgressBar now={10} label={`${10}%`} />
-          </div>
-        </Row> */}
-      </div>
-    );
-  };
-
-  const First = (props: any) => {
-    const { nextStep } = props;
-    function handleClick(value: string) {
-      dispatch(updateFootprint({ footprintType: value }));
-      nextStep();
-    }
-    return (
-      <div className="wizard-step-1">
-        <Button
-          onClick={() => handleClick("agua")}
-          className="wizard-buttons"
-          variant="primary"
-        >
-          Huella Hídrica
-        </Button>
-        <Button className="wizard-buttons" variant="secondary">
-          Huella de Carbono
-        </Button>
-      </div>
-    );
-  };
-
   return (
     <div className="wizard-container">
       <div className="wizard-steppers-container">
         <StepWizard>
-          <First />
-          <Second />
-          <Third />
+          <Step1 showButtons={false} />
+          <Step2 />
+          <Step3 />
         </StepWizard>
       </div>
     </div>
