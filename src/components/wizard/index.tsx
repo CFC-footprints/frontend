@@ -20,7 +20,7 @@ function Wizard() {
     <div className="wizard-container">
       <div className="wizard-steppers-container">
         <StepWizard>
-          <Step1 showButtons={false} />
+          <Step1 />
           <Step2 />
           <Step3 />
         </StepWizard>

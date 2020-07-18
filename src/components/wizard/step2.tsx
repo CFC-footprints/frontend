@@ -18,7 +18,6 @@ function Step2(props: any) {
   const handleChange = (value: Date | null, type: string) => {
     if (!value) return;
     dispatch(updateFootprint({ [type]: value }));
-    nextStep();
   };
 
   let buttons;

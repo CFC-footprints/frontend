@@ -7,6 +7,8 @@ const initialState: WizardState = {
   footprintType: "",
   initDateTime: undefined,
   endDateTime: new Date(),
+  tokens: undefined,
+  error: false,
 };
 
 export default function wizardReducer(

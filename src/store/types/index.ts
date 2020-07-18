@@ -4,6 +4,8 @@ export interface WizardState {
   footprintType?: string;
   initDateTime?: Date;
   endDateTime?: Date;
+  tokens?: any;
+  error?: boolean;
 }
 
 interface UpdateFootprintAction {

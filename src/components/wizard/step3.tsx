@@ -16,9 +16,10 @@ function Step3(props: any) {
 
   const { initDateTime, endDateTime } = initState;
 
-  const handleChange = (value: Date | null, type: string) => {
+  const handleChange = (value: any) => {
+    console.log(value);
     if (!value) return;
-    dispatch(updateFootprint({ [type]: value }));
+    // dispatch(updateFootprint({ [type]: value }));
     // nextStep();
   };
 
@@ -31,28 +32,33 @@ function Step3(props: any) {
   }
 
   return (
-    <div className="wizard-step">
-      <h3>Latitud</h3>
-      <InputGroup size="lg">
-        <InputGroup.Prepend>
-          <InputGroup.Text id="inputGroup-sizing-lg">Latitud</InputGroup.Text>
-        </InputGroup.Prepend>
-        <FormControl
-          aria-label="Large"
-          aria-describedby="inputGroup-sizing-sm"
-        />
-      </InputGroup>
-      <h3>Longitud</h3>
-      <InputGroup size="lg">
-        <InputGroup.Prepend>
-          <InputGroup.Text id="inputGroup-sizing-lg">Longitud</InputGroup.Text>
-        </InputGroup.Prepend>
-        <FormControl
-          aria-label="Large"
-          aria-describedby="inputGroup-sizing-sm"
-        />
-      </InputGroup>
-
+    <div>
+      <div className="wizard-step">
+        <h3>Latitud</h3>
+        <InputGroup size="lg">
+          <InputGroup.Prepend>
+            <InputGroup.Text id="inputGroup-sizing-lg">Latitud</InputGroup.Text>
+          </InputGroup.Prepend>
+          <FormControl
+            aria-label="Large"
+            aria-describedby="inputGroup-sizing-sm"
+            onChange={(e: any) => handleChange(e.target.value)}
+          />
+        </InputGroup>
+        <h3>Longitud</h3>
+        <InputGroup size="lg">
+          <InputGroup.Prepend>
+            <InputGroup.Text id="inputGroup-sizing-lg">
+              Longitud
+            </InputGroup.Text>
+          </InputGroup.Prepend>
+          <FormControl
+            aria-label="Large"
+            aria-describedby="inputGroup-sizing-sm"
+            onChange={(e: any) => handleChange(e.target.value)}
+          />
+        </InputGroup>
+      </div>
       {buttons}
     </div>
   );

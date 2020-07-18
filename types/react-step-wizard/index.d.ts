@@ -4,3 +4,5 @@ declare namespace JSX {
     heyo: any;
   }
 }
+
+declare module "ibmcloud-appid-js";

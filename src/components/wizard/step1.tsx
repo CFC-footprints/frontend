@@ -2,7 +2,6 @@ import React from "react";
 import Button from "react-bootstrap/Button";
 import { useDispatch } from "react-redux";
 import updateFootprint from "../../store/actions";
-import ActionButtons from "./actionButtons";
 
 function Step(props: any) {
   const dispatch = useDispatch();
