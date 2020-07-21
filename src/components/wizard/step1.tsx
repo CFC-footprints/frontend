@@ -20,9 +20,9 @@ function Step(props: any) {
           className="wizard-buttons"
           variant="primary"
         >
-          Huella Hídrica
+          Water Footprint
         </Button>
-        <Button className="wizard-buttons" variant="secondary">
+        <Button className="wizard-buttons" variant="secondary" disabled>
           Huella de Carbono
         </Button>
       </div>

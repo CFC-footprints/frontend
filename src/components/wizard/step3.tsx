@@ -54,31 +54,6 @@ function Step3(props: any) {
     <div>
       <div className="wizard-step">
         <div className="wizard-maps">{map}</div>
-
-        {/* <h3>Latitud</h3>
-        <InputGroup size="lg">
-          <InputGroup.Prepend>
-            <InputGroup.Text id="inputGroup-sizing-lg">Latitud</InputGroup.Text>
-          </InputGroup.Prepend>
-          <FormControl
-            aria-label="Large"
-            aria-describedby="inputGroup-sizing-sm"
-            onChange={(e: any) => handleChange(e.target.value)}
-          />
-        </InputGroup>
-        <h3>Longitud</h3>
-        <InputGroup size="lg">
-          <InputGroup.Prepend>
-            <InputGroup.Text id="inputGroup-sizing-lg">
-              Longitud
-            </InputGroup.Text>
-          </InputGroup.Prepend>
-          <FormControl
-            aria-label="Large"
-            aria-describedby="inputGroup-sizing-sm"
-            onChange={(e: any) => handleChange(e.target.value)}
-          />
-        </InputGroup> */}
       </div>
       {buttons}
     </div>

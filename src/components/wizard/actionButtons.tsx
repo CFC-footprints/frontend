@@ -12,9 +12,9 @@ export default function ActionsButtons(props: ActionButtons) {
   return (
     <div className="wizard-steps-buttons">
       <Button onClick={previousStep} variant="danger">
-        Atrás
+        Previous
       </Button>
-      <Button onClick={nextStep}>Siguiente</Button>
+      <Button onClick={nextStep}>Next</Button>
     </div>
   );
 }

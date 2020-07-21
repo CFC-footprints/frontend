@@ -1,9 +1,9 @@
 .App {
-  .login-button-container {
+  .login-container {
     display: flex;
     align-items: center;
     flex-direction: column;
-
+    margin: 20px;
     .login-button {
       margin: 10px;
     }

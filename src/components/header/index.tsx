@@ -30,7 +30,7 @@ function Header() {
                 className="d-inline-block"
                 alt="React Bootstrap logo"
               />{" "}
-              Water Footprint
+              YvY
             </Navbar.Brand>
             <Navbar.Collapse className="justify-content-end">
               {userName ? <FaUserAlt /> : null}
