@@ -1,3 +1,5 @@
+import { LatLng } from "react-leaflet";
+
 export const UPDATE_FOOTPRINT = "UPDATE_FOOTPRINT";
 
 export interface WizardState {
@@ -6,6 +8,10 @@ export interface WizardState {
   endDateTime?: Date;
   tokens?: any;
   error?: boolean;
+  markers?: {
+    lat: number;
+    lng: number;
+  };
 }
 
 interface UpdateFootprintAction {

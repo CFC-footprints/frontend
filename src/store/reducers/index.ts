@@ -9,6 +9,10 @@ const initialState: WizardState = {
   endDateTime: new Date(),
   tokens: undefined,
   error: false,
+  markers: {
+    lat: -33.47269,
+    lng: -70.64724,
+  },
 };
 
 export default function wizardReducer(
