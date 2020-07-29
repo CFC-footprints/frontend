@@ -13,6 +13,8 @@ const initialState: WizardState = {
     lat: -33.47269,
     lng: -70.64724,
   },
+  lat: "-33.47269",
+  lng: "-70.64724",
 };
 
 export default function wizardReducer(
