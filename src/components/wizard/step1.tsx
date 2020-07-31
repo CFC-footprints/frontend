@@ -17,15 +17,17 @@ function Step(props: any) {
   return (
     <div>
       <div className="wizard-step-1">
-        <img
-          src={Drop}
-          width="100"
-          height="100"
-          className="footer-image"
-          alt="React Bootstrap logo"
-          onClick={() => handleClick("water")}
-        />
-        Water Footprint
+        <div className="wizard-step-1-icon">
+          <img
+            src={Drop}
+            width="100"
+            height="100"
+            className="footer-image"
+            alt="React Bootstrap logo"
+            onClick={() => handleClick("water")}
+          />
+          Water Footprint
+        </div>
       </div>
     </div>
   );

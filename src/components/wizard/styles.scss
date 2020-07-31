@@ -26,7 +26,19 @@
       width: 100px;
       border-radius: 50%;
     }
+    
+    .wizard-step-1-icon {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .wizard-step-1-icon:hover{
+      cursor: pointer;
+      transform: scale(1.5)
+    }
   }
+
+  
 
   .datepicker-container {
     align-self: center;
