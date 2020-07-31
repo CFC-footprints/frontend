@@ -3,10 +3,6 @@
   margin: 10px 0 10px 0;
 }
 
-.wizard-dropdwon {
-  margin: 10px 0px;
-}
-
 .wizard-container {
   display: flex;
   align-items: center;
@@ -60,6 +56,10 @@
 
     .wizard-coordinates {
       margin-top: 10px;
+    }
+
+    .wizard-dropdown {
+      align-self: center;
     }
 
   }

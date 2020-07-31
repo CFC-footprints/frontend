@@ -12,6 +12,9 @@ export interface WizardState {
   };
   lat?: string;
   lng?: string;
+  crops?: { [key: string]: any };
+  firstLvlSelection?: string;
+  secondLvlSelection?: string;
 }
 
 interface UpdateFootprintAction {

@@ -15,6 +15,9 @@ const initialState: WizardState = {
   },
   lat: "-33.47269",
   lng: "-70.64724",
+  crops: [],
+  firstLvlSelection: undefined,
+  secondLvlSelection: undefined,
 };
 
 export default function wizardReducer(
