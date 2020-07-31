@@ -7,6 +7,7 @@ import Wizard from "./components/wizard";
 import Header from "./components/header";
 import store from "./store";
 import Authenticate from "./components/authenticate";
+import Footer from "./components/footer";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Authenticate>
           <Wizard />
         </Authenticate>
+        <Footer />
       </div>
     </Provider>
   );

@@ -12,6 +12,13 @@ export interface WizardState {
   };
   lat?: string;
   lng?: string;
+  crops?: { [key: string]: any };
+  firstLvlSelection?: string;
+  secondLvlSelection?: string;
+  firstLvlArray?: string[];
+  finalResponse?: object;
+  tons?: string;
+  hectares?: string;
 }
 
 interface UpdateFootprintAction {

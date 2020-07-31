@@ -3,6 +3,8 @@ import Button from "react-bootstrap/Button";
 import { useDispatch } from "react-redux";
 import updateFootprint from "../../store/actions";
 
+import Drop from "../../images/drop.png";
+
 function Step(props: any) {
   const dispatch = useDispatch();
   const { nextStep } = props;
@@ -15,16 +17,17 @@ function Step(props: any) {
   return (
     <div>
       <div className="wizard-step-1">
-        <Button
-          onClick={() => handleClick("agua")}
-          className="wizard-buttons"
-          variant="primary"
-        >
+        <div className="wizard-step-1-icon">
+          <img
+            src={Drop}
+            width="100"
+            height="100"
+            className="footer-image"
+            alt="React Bootstrap logo"
+            onClick={() => handleClick("water")}
+          />
           Water Footprint
-        </Button>
-        <Button className="wizard-buttons" variant="secondary" disabled>
-          Huella de Carbono
-        </Button>
+        </div>
       </div>
     </div>
   );

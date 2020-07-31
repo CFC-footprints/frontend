@@ -3,10 +3,6 @@
   margin: 10px 0 10px 0;
 }
 
-.wizard-dropdwon {
-  margin: 10px 0px;
-}
-
 .wizard-container {
   display: flex;
   align-items: center;
@@ -14,30 +10,45 @@
 }
 
 .wizard-steppers-container {
-  width: 540px;
-  margin: 30px auto;
+  width: 600px;
+  margin: 0px auto;
   
   .wizard-step-1 {
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
-  
+    margin: 50% 0px;
+    
     .wizard-buttons {
       margin: 10px 0;
       height: 100px;
       width: 100px;
       border-radius: 50%;
     }
+    
+    .wizard-step-1-icon {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .wizard-step-1-icon:hover{
+      cursor: pointer;
+      transform: scale(1.5)
+    }
   }
+
+  
 
   .datepicker-container {
     align-self: center;
     display: flex;
     align-items: center;
+    flex-direction: column;
     .datepicker-arrow {
       width: 10%;
       margin: 0px 5px;
+      transform: rotate(90deg)
     }
   }
 
@@ -53,13 +64,31 @@
 
     .wizard-maps {
       .leaflet-container {
-        height: 400px;
+        height: 350px;
         width: 100%;
       }
     }
 
     .wizard-coordinates {
       margin-top: 10px;
+      display: flex;
+      align-items: center;
+    }
+
+    .wizard-coordinates-buttons{
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      margin: 5px 0px;
+
+    }
+    
+    .wizard-dropdown-tons-buttons{
+      margin: 10px 0px;
+    }
+
+    .wizard-dropdown {
+      align-self: center;
     }
 
   }
@@ -70,4 +99,5 @@
     justify-content: space-around;
     bottom: 0px;
   }
+
 }

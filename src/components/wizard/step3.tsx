@@ -39,6 +39,7 @@ function Step3(props: any) {
   return (
     <div>
       <div className="wizard-step">
+        <h3>Please, select your harvest location</h3>
         <div className="wizard-maps">
           <Map />
         </div>
@@ -81,6 +82,8 @@ function Step3(props: any) {
               }}
             />
           </InputGroup>
+        </div>
+        <div className="wizard-coordinates-buttons">
           <Button onClick={handleSubmit}>Get Address</Button>
         </div>
       </div>

@@ -6,3 +6,5 @@ declare namespace JSX {
 }
 
 declare module "ibmcloud-appid-js";
+
+declare module "date-format";
