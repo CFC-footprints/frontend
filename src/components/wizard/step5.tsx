@@ -2,8 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import dateFormat from "date-format";
-import ActionButtons from "./actionButtons";
-import updateFootprint, { postETc } from "../../store/actions";
+import { postETc } from "../../store/actions";
 import { useTypedSelector } from "../../store/reducers";
 import "react-datepicker/dist/react-datepicker.css";
 import "leaflet/dist/leaflet.css";
