@@ -110,7 +110,7 @@ function Step3(props: any) {
                     onChange={(e) => {
                       dispatch(
                         updateFootprint({
-                          tons: e.target.value,
+                          hectares: e.target.value,
                         })
                       );
                     }}

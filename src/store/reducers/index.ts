@@ -21,6 +21,7 @@ const initialState: WizardState = {
   firstLvlArray: [],
   finalResponse: {},
   tons: undefined,
+  hectares: undefined,
 };
 
 export default function wizardReducer(

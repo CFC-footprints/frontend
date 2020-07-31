@@ -18,6 +18,7 @@ export interface WizardState {
   firstLvlArray?: string[];
   finalResponse?: object;
   tons?: string;
+  hectares?: string;
 }
 
 interface UpdateFootprintAction {

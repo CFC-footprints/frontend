@@ -30,6 +30,8 @@ function Step5(props: any) {
         endDateTime,
         firstLvlSelection = "cereals",
         secondLvlSelection = "barley: november - central india",
+        tons,
+        hectares,
       } = initState;
 
       const firstLvlCrop = crops[firstLvlSelection];
@@ -57,6 +59,8 @@ function Step5(props: any) {
             Late,
             Mid,
           },
+          tons,
+          hectares,
         };
         postETc(payload);
       }
