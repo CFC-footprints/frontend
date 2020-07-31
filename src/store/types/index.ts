@@ -17,6 +17,7 @@ export interface WizardState {
   secondLvlSelection?: string;
   firstLvlArray?: string[];
   finalResponse?: object;
+  tons?: string;
 }
 
 interface UpdateFootprintAction {

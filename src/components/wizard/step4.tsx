@@ -1,7 +1,7 @@
 /* eslint-disable react/no-array-index-key */
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { Form } from "react-bootstrap";
+import { Form, FormControl, InputGroup } from "react-bootstrap";
 import ActionButtons from "./actionButtons";
 import updateFootprint, { getCrops } from "../../store/actions";
 import { useTypedSelector } from "../../store/reducers";
@@ -80,6 +80,43 @@ function Step3(props: any) {
                 <option key="default">Select one option</option>
                 {secondLvlCrops}
               </Form.Control>
+              <h3>Please, select your tons and hectares</h3>
+              <div className="wizard-dropdown-tons-buttons">
+                <InputGroup>
+                  <InputGroup.Prepend>
+                    <InputGroup.Text id="inputGroup-sizing-lg">
+                      Tons
+                    </InputGroup.Text>
+                  </InputGroup.Prepend>
+                  <FormControl
+                    aria-label="Default"
+                    aria-describedby="inputGroup-sizing-sm"
+                    onChange={(e) => {
+                      dispatch(
+                        updateFootprint({
+                          tons: e.target.value,
+                        })
+                      );
+                    }}
+                  />
+                  <InputGroup.Prepend>
+                    <InputGroup.Text id="inputGroup-sizing-lg">
+                      Hectares
+                    </InputGroup.Text>
+                  </InputGroup.Prepend>
+                  <FormControl
+                    aria-label="Default"
+                    aria-describedby="inputGroup-sizing-sm"
+                    onChange={(e) => {
+                      dispatch(
+                        updateFootprint({
+                          tons: e.target.value,
+                        })
+                      );
+                    }}
+                  />
+                </InputGroup>
+              </div>
             </div>
           ) : null}
         </div>

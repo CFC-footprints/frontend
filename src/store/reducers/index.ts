@@ -20,6 +20,7 @@ const initialState: WizardState = {
   secondLvlSelection: undefined,
   firstLvlArray: [],
   finalResponse: {},
+  tons: undefined,
 };
 
 export default function wizardReducer(
