@@ -1,25 +1,22 @@
 /* eslint-disable react/no-array-index-key */
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import dateFormat from "date-format";
-import ActionButtons from "./actionButtons";
-import updateFootprint, { postETc } from "../../store/actions";
+import { postETc } from "../../store/actions";
 import { useTypedSelector } from "../../store/reducers";
 import "react-datepicker/dist/react-datepicker.css";
 import "leaflet/dist/leaflet.css";
+
+import Drops from "../../images/drops.png";
+import RRSS from "../../images/rrss.png";
 
 function Step5(props: any) {
   const dispatch = useDispatch();
   const initState = useTypedSelector((state) => state);
   const { crops = [] } = initState;
-  const { nextStep, previousStep, showButtons = true, isActive } = props;
-  let buttons;
+  const { isActive } = props;
 
-  if (showButtons) {
-    buttons = <ActionButtons nextStep={nextStep} previousStep={previousStep} />;
-  } else {
-    buttons = null;
-  }
+  const [result, setResult] = useState(undefined);
 
   useEffect(() => {
     if (isActive) {
@@ -40,6 +37,7 @@ function Step5(props: any) {
       const selectedCrop = firstLvlCrop.find(
         (crop: any) => crop.Name === name && crop.Description === description
       );
+
       if (selectedCrop) {
         const { Dev, Init, Late, Mid } = selectedCrop;
         const payload = {
@@ -62,14 +60,42 @@ function Step5(props: any) {
           tons,
           hectares,
         };
-        postETc(payload);
+        postETc(payload).then((response) => {
+          const { HH } = response.data;
+          setResult(HH);
+        });
       }
     }
-  }, [crops, dispatch, initState, isActive]);
+  }, [crops, dispatch, initState, isActive, result]);
 
   return (
     <div>
-      <div className="wizard-step" />
+      <div className="wizard-step">
+        {result ? (
+          <div>
+            <div className="wizard-final-step">
+              <div className="wizard-final-step-image">
+                <img
+                  src={Drops}
+                  width="100"
+                  height="100"
+                  alt="Water footprint logo"
+                />{" "}
+              </div>
+              Your water footprint is
+              <div className="wizard-final-step-result">{`${result} Liter`}</div>
+              <div>
+                <img
+                  src={RRSS}
+                  width="300"
+                  height="30"
+                  alt="Social Media logo"
+                />{" "}
+              </div>
+            </div>
+          </div>
+        ) : null}
+      </div>
     </div>
   );
 }

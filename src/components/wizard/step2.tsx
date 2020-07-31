@@ -52,7 +52,7 @@ function Step2(props: any) {
           />
         </div>
       </div>
-      {buttons}
+      {initDateTime && endDateTime ? buttons : null}
     </div>
   );
 
