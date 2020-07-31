@@ -12,7 +12,13 @@ import "leaflet/dist/leaflet.css";
 function Step3(props: any) {
   const dispatch = useDispatch();
   const initState = useTypedSelector((state) => state);
-  const { crops = [], firstLvlSelection = undefined } = initState;
+  const {
+    crops = [],
+    firstLvlSelection = undefined,
+    secondLvlSelection = undefined,
+    tons,
+    hectares,
+  } = initState;
   const { nextStep, previousStep, showButtons = true, isActive } = props;
   let buttons;
   let secondLvlCrops;
@@ -121,7 +127,9 @@ function Step3(props: any) {
           ) : null}
         </div>
       </div>
-      {buttons}
+      {tons && hectares && firstLvlSelection && secondLvlSelection
+        ? buttons
+        : null}
     </div>
   );
 }

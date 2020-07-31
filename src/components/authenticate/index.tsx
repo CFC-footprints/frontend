@@ -64,9 +64,11 @@ function Authenticate(props: any) {
     );
   };
 
-  return stateTokens && stateTokens.accessToken && !loading
-    ? children
-    : children;
+  return stateTokens && stateTokens.accessToken && !loading ? (
+    children
+  ) : (
+    <LoginButton />
+  );
 }
 
 export default Authenticate;

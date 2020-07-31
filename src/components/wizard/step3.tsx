@@ -87,7 +87,7 @@ function Step3(props: any) {
           <Button onClick={handleSubmit}>Get Address</Button>
         </div>
       </div>
-      {buttons}
+      {lat && lng ? buttons : null}
     </div>
   );
 }
