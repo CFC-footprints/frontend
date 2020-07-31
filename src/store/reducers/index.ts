@@ -18,6 +18,8 @@ const initialState: WizardState = {
   crops: [],
   firstLvlSelection: undefined,
   secondLvlSelection: undefined,
+  firstLvlArray: [],
+  finalResponse: {},
 };
 
 export default function wizardReducer(

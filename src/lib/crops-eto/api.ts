@@ -7,7 +7,7 @@ const endpoints = {
 };
 
 const axiosInstance = axios.create({
-  baseURL: "https://cfc-waterfootprint-bff-dev.mybluemix.net/",
+  baseURL: "https://getstartedpython-agile-bat-wb.mybluemix.net/",
   timeout: 10000,
 });
 

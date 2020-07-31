@@ -15,6 +15,8 @@ export interface WizardState {
   crops?: { [key: string]: any };
   firstLvlSelection?: string;
   secondLvlSelection?: string;
+  firstLvlArray?: string[];
+  finalResponse?: object;
 }
 
 interface UpdateFootprintAction {

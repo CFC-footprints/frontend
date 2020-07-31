@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import DatePicker from "react-datepicker";
-import { InputGroup, FormControl, Image } from "react-bootstrap";
+import { Image } from "react-bootstrap";
 import ActionButtons from "./actionButtons";
 import updateFootprint from "../../store/actions";
 import { useTypedSelector } from "../../store/reducers";
@@ -37,6 +37,7 @@ function Step2(props: any) {
         <div className="datepicker-container">
           <DatePicker
             selected={initDateTime}
+            locale="en"
             onChange={(date) => handleChange(date, "initDateTime")}
           />
           <div className="datepicker-arrow">
@@ -44,6 +45,7 @@ function Step2(props: any) {
           </div>
           <DatePicker
             selected={endDateTime}
+            locale="en"
             onChange={(date) => handleChange(date, "endDateTime")}
           />
         </div>
