@@ -29,7 +29,7 @@ function Step(props: any) {
             alt="Water footprint logo"
             onClick={() => handleClick("water")}
           />
-          Water Footprint
+          Evapotranspiration
         </div>
         <div className="wizard-step-1-icon">
           <img

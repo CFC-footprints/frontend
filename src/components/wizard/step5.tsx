@@ -82,8 +82,8 @@ function Step5(props: any) {
                   alt="Water footprint logo"
                 />{" "}
               </div>
-              Your water footprint is
-              <div className="wizard-final-step-result">{`${result} Liter`}</div>
+              Your Evapotranspiration is
+              <div className="wizard-final-step-result">{`${result} mm`}</div>
               <div>
                 <img
                   src={RRSS}
