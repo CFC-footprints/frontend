@@ -6,7 +6,7 @@ import { FaUserAlt } from "react-icons/fa";
 import { useTypedSelector } from "../../store/reducers";
 
 import "./styles.scss";
-import logo from "../../images/Logo.png";
+import logo from "../../images/yvy.png";
 
 function Header() {
   const tokens = useTypedSelector((state) => state.tokens);
@@ -22,15 +22,14 @@ function Header() {
       <div className="header-container">
         <div className="header">
           <Navbar>
-            <Navbar.Brand href="#">
+            <Navbar.Brand href="/">
               <img
                 src={logo}
                 width="50"
                 height="50"
                 className="d-inline-block"
-                alt="React Bootstrap logo"
+                alt="YVY logo"
               />{" "}
-              YvY
             </Navbar.Brand>
             <Navbar.Collapse className="justify-content-end">
               {userName ? <FaUserAlt /> : null}
